@@ -4,23 +4,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>ORCID DEMO</title>
+  <title>ORCID XMLHttpRequest DEMO</title>
+  
+  <script src="bibtexParse.js"></script>  
   <script src="orcid.js"></script>
+
 </head>
 
 <body>
-  <h1>Publications</h1>
-  <div id="myPublications"></div>
 
-  <h1>Funding</h1>
-  <div id="myFunding"></div>
+  <h1>My Profile</h1>
+  <div id="myORCIDLink"></div>
 
+  <h1>My Works</h1>
+  <div id="myORCIDWorks"></div>  
+  
+  <script>
+    showORCIDProfile("0000-0001-7671-8930", "myORCIDLink", "myORCIDWorks");
+  </script>  
 
 </body>
-
-<script>
-  createORCIDProfile("0000-0002-9563-0691", "myPublications");
-  createORCIDFundingProfile("0000-0002-9563-0691", "myFunding");
-</script>
-
 </html>

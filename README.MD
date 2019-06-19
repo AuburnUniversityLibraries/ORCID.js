@@ -3,44 +3,53 @@ ORCID.js
 
 ##Client Side ORCID Generator
 
-This library creates a simple way to include ORCID profile information. It (currently) works using the javascript fetch() method.
+This library creates a simple way to include ORCID Works information on pages that allow Javascripts to be added.
 
-Currently implemented features are:
-- List of Publications
-- List of Funding
+Based on the ORCID.js library by Mike Crabb. https://github.com/mikecrabb/ORCID.js -- Our version is reimplemented using XMLHttpRequest instead of fetch, primarly to allow (current) compatibility with IE.
+
+Requires bibtexParseJs by ORCID: https://github.com/ORCID/bibtexParseJs -- MIT License
+
+##Details
+
+This library looks up a list of Works associated with an ORCID ID. For each work it displays the citation information (supporting plaintext or BibTex) and the URL. Optionally it also displays a formatted link to that ORCID profile.
 
 ##Hello World Example
 
 ```
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>ORCID DEMO</title>
-    <script src="orcid.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ORCID XMLHttpRequest DEMO</title>
+  
+  <script src="bibtexParse.js"></script>  
+  <script src="orcid.js"></script>
+
 </head>
 
 <body>
-<h1>Publications</h1>
-<div id="myPublications"></div>
 
-<h1>Funding</h1>
-<div id="myFunding"></div>
+  <h1>My Profile</h1>
+  <div id="myORCIDLink"></div>
+
+  <h1>My Works</h1>
+  <div id="myORCIDWorks"></div>  
+  
+  <script>
+    showORCIDProfile("XXXX-XXXX-XXXX-XXXX", "myORCIDLink", "myORCIDWorks");
+  </script>  
+
 </body>
-
-<script>
-    createORCIDProfile("0000-0002-9563-0691","myPublications");
-    createORCIDFundingProfile("0000-0002-9563-0691", "myFunding");
-</script>
-
 </html>
+
 ```
 
-##Compatibility
+##See Also
 
-There are some <a href="http://caniuse.com/#feat=fetch">compatibility issues</a> with using this library as it relies on fetch() instead of XMLHttpRequest.
+ORCID has an official ORCID-js library that is more feature complete and comes with more dependencies: https://github.com/ORCID/orcid-js
 
 ##Licence
 * This is made available and licensed under the MIT License:
- * https://opensource.org/licenses/mit-license.html
+* https://opensource.org/licenses/mit-license.html
