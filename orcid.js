@@ -87,10 +87,16 @@ function getWorkInformation(orcidID, putcode, elementID) {
       var xmldata = xhr.responseXML;
      
       //DEBUG!
-      //console.log(xmldata);
+      console.log(xmldata);
 
       var output = "";
-            
+      
+      // citation fields required for this; if they don't exist, exit early
+      if (typeof xmldata.getElementsByTagName("work:citation-value")[0] === 'undefined') {
+        console.log("orcid.js [Warning] Work #" + putcode + " missing work:citation-value");
+        return;
+      }
+      
       // citations can be preformatted or in structured bibtex    
       var citation_raw = xmldata.getElementsByTagName("work:citation-value")[0].textContent;
       var citation;
