@@ -7,7 +7,7 @@ This library creates a simple way to include ORCID Works information on pages th
 
 Based on the ORCID.js library by Mike Crabb. https://github.com/mikecrabb/ORCID.js -- Our version is reimplemented using XMLHttpRequest instead of fetch, primarly to allow (current) compatibility with IE.
 
-Requires bibtexParseJs by ORCID: https://github.com/ORCID/bibtexParseJs -- MIT License
+For citations using BibTex format, requires bibtexParseJs by ORCID: https://github.com/ORCID/bibtexParseJs -- MIT License
 
 ##Details
 
