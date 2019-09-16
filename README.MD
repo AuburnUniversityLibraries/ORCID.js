@@ -15,36 +15,9 @@ This library looks up a list of Works associated with an ORCID ID. For each work
 
 ##Hello World Example
 
-```
-<!DOCTYPE html>
-<html>
+Example of using this script in a simple HTML page:
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>ORCID XMLHttpRequest DEMO</title>
-  
-  <script src="bibtexParse.js"></script>  
-  <script src="orcid.js"></script>
-
-</head>
-
-<body>
-
-  <h1>My Profile</h1>
-  <div id="myORCIDLink"></div>
-
-  <h1>My Works</h1>
-  <div id="myORCIDWorks"></div>  
-  
-  <script>
-    showORCIDProfile("XXXX-XXXX-XXXX-XXXX", "myORCIDLink", "myORCIDWorks");
-  </script>  
-
-</body>
-</html>
-
-```
+https://github.com/AuburnUniversityLibraries/ORCID.js/blob/master/index.html
 
 ##See Also
 
